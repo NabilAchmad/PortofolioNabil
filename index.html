@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portofolio</title>
+        <link rel="Icon" type="jpg" href="image/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <div class="logo">
+                <h2>Nabil Achmad Khoir</h2>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+    
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">What I Do</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Portofolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            <div class="wrapper">
+                <div class="sidebar">
+                    <div class="profile">
+                        <img src="image/putih.png" alt="" width="200" height="200">
+                        <h2>Nabil Achmad Khoir</h2>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">What I Do</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <h4>Welcome</h4>
+                    <h1>I'm <span class="input"></span></h1>
+                    <h4>Based in Padang, Sumatera Barat, Indonesia.</h4>
+                    <a href="" class="btn">Hire Me</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+        <script>
+            var typed = new Typed('.input', {
+                strings:["Nabil Achmad Khoir", "Front End Developer", "Web Developer"],
+                typeSpeed:65,
+                backSpeed:55,
+                loop:true
+            })
+
+            /* Displaying topnavbar on small screen size */
+
+            let menuicon=document.querySelector(".menu-icon");
+            let navbar=document.querySelector(".navbar");
+            let icon=document.querySelector(".menu-icon i");
+
+            menuicon.addEventListener("click", function(){
+                navbar.classList.toggle("open");
+                if(icon.classList.contains("fa-bars")){
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+                }else{
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            })
+        </script>
+    </body>
+</html>
